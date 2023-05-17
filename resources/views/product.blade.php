@@ -1,12 +1,8 @@
 <!-- product.blade.php -->
-
-@extends('layouts.app')
-
-@section('content')
 <div class="container">
     <div class="row">
         <div class="col-md-6">
-            <img src="{{ asset('images/' . $product->image) }}" alt="{{ $product->name }}" class="img-fluid">
+            <img src="{{asset('images/' . $product->image) }}" alt="{{ $product->name }}" class="img-fluid">
         </div>
         <div class="col-md-6">
             <h2>{{ $product->name }}</h2>
@@ -18,4 +14,3 @@
 </div>
 <a href="{{ route('product.show', ['id' => $product->id]) }}">View Product</a>
 
-@endsection
